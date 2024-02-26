@@ -1,0 +1,17 @@
+<form [formGroup]="dynamicFormGroup">
+    <div *ngFor="let field of fields">
+        <app-field-input [field]="field"></app-field-input>
+        <!-- <app-dynamic-error [fieldName]="field.fieldName"></app-dynamic-error> -->
+        <!-- https://www.danywalls.com/creating-dynamic-forms-in-angular-a-step-by-step-guide -->
+    </div>
+</form>
+<div>
+    <button (click)="addNewQuestion()">addQ</button>
+    <input>
+    <select required>
+        <option value="dropdown">dropdown</option>
+        <option value="radio">radio</option>
+        <option value="">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+</div>
